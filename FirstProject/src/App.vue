@@ -1,19 +1,17 @@
 <template>
- <div>
- 
-
+ <div id="app">
+ <PostList v-bind:posts="posts"/>
  </div>
   
 </template>
 
 <script>
-
+import PostList from "./components/Postlist/PostList.vue";
 export default {
   name: 'App',
   components:{
-    
-   } ,
-
+      PostList 
+    },
    data(){
     return {
       posts: [
@@ -27,10 +25,7 @@ export default {
       origin:{
         "name":"Post-Apocalyptic Earth",
         "url":"https://rickandmortyapi.com/  api/location/8"},
-      location:{
-        "name":"Post-Apocalyptic Earth",
-        "url":"https://rickandmortyapi.com/api/loca tion/8"
-      }, 
+     
       image:"https://rickandmortyapi.com/api/character/avatar/25.jpeg",
       episode:["https://rickandmortyapi.com/api/episode/23"],
       url:"https://rickandmortyapi.com/api/character/25",
@@ -128,6 +123,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
